@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Idea Vault · 42 product ideas for developers and investors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#000000; --muted:#595959; --line:#D9D9D9;
+  --deep:#000000; --deep-ink:#FFFFFF; --mark:#FFFFFF; --mark-ink:#000000;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif; --sans:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#000000; --surface:#0B0B0B; --ink:#FFFFFF; --muted:#A6A6A6; --line:#2B2B2B;
+    --deep:#161616; --deep-ink:#FFFFFF; --mark:#FFFFFF; --mark-ink:#000000;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#000000; --surface:#0B0B0B; --ink:#FFFFFF; --muted:#A6A6A6; --line:#2B2B2B;
+  --deep:#161616; --deep-ink:#FFFFFF; --mark:#FFFFFF; --mark-ink:#000000;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px;border-radius:4px}
+.hero :focus-visible,footer :focus-visible{outline-color:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* hero */
+.hero{background:var(--deep);color:var(--deep-ink);padding:56px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:end}
+.brand{font-weight:700;font-size:15px;letter-spacing:.02em;margin-bottom:40px;display:flex;align-items:center;gap:10px}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--mark);display:inline-block}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,6.4vw,76px);line-height:1.02;letter-spacing:-.02em;margin:0 0 20px;max-width:12ch}
+.hero p{font-size:18px;max-width:46ch;margin:0;opacity:.92}
+.contact-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:22px}
+.contact-box h2{font-family:var(--serif);font-size:22px;margin:0 0 6px}
+.contact-box p{font-size:15px;margin:0 0 16px;opacity:.88}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px var(--sans);padding:12px 18px;border-radius:10px;border:1px solid transparent;text-decoration:none;cursor:pointer;min-height:44px}
+.btn-mark{background:var(--mark);color:var(--mark-ink)}
+.btn-mark:hover{background:#E6E6E6}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn-ghost:hover{background:rgba(127,127,127,.14)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:36px 0 8px}
+.steps div{border-top:2px solid var(--ink);padding-top:12px}
+.steps b{font-family:var(--serif);font-size:19px;display:block;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:15px}
+
+/* controls */
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:16px 0 12px;border-bottom:1px solid var(--line);margin-top:24px}
+.search{width:100%;font:500 16px var(--sans);padding:13px 16px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);min-height:48px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 0 2px;scrollbar-width:thin}
+.chip{flex:none;font:600 14px var(--sans);padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;min-height:40px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip small{opacity:.65;font-weight:600;margin-left:4px}
+.count{color:var(--muted);font-size:14px;margin:16px 0 0}
+
+/* ledger */
+.list{list-style:none;margin:8px 0 0;padding:0}
+.row{display:grid;grid-template-columns:72px 1fr auto;gap:8px 20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.num{font-family:var(--serif);font-size:44px;font-weight:600;line-height:1;color:var(--deep);font-variant-numeric:lining-nums}
+:root[data-theme="dark"] .num{color:var(--mark)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .num{color:var(--mark)}}
+.row h3{font-family:var(--serif);font-size:22px;line-height:1.2;margin:0 0 4px;font-weight:600}
+.row p{margin:0;color:var(--muted);font-size:15.5px;max-width:62ch}
+.row .pitch{color:var(--ink);font-weight:600;font-size:16px;margin:0 0 4px}
+.cat{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:var(--deep);background:color-mix(in srgb,var(--deep) 11%,transparent);padding:3px 10px;border-radius:6px}
+:root[data-theme="dark"] .cat{color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cat{color:#fff}}
+.row .btn{background:var(--ink);color:var(--bg);white-space:nowrap}
+.row .btn:hover{background:var(--muted);color:var(--bg)}
+.empty{padding:48px 0;color:var(--muted)}
+
+/* footer */
+footer{background:var(--deep);color:var(--deep-ink);margin-top:64px;padding:48px 0 56px}
+footer h2{font-family:var(--serif);font-size:clamp(28px,4vw,40px);margin:0 0 10px;line-height:1.1}
+footer p{max-width:52ch;margin:0 0 20px;opacity:.9}
+.fine{font-size:13px;opacity:.7;margin-top:28px}
+
+/* dialog */
+dialog{border:none;border-radius:16px;padding:0;max-width:460px;width:calc(100% - 32px);background:var(--surface);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(8,16,14,.6)}
+.dlg{padding:26px}
+.dlg h2{font-family:var(--serif);font-size:24px;margin:0 0 6px;line-height:1.2}
+.dlg p{color:var(--muted);margin:0 0 16px;font-size:15px}
+.ref{display:flex;gap:8px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-weight:600;font-size:14px;margin-bottom:16px;justify-content:space-between}
+.ref button{font:600 13px var(--sans);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;min-height:36px}
+.dlg .btn-row .btn{flex:1}
+.dlg .btn-x{background:var(--ink);color:var(--bg)}
+.dlg .btn-in{background:transparent;color:var(--ink);border-color:var(--ink)}
+.close{margin-top:14px;background:none;border:none;color:var(--muted);font:600 14px var(--sans);cursor:pointer;padding:8px 0}
+
+.sound{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;gap:8px;background:#FF7A00;color:#000;border:none;border-radius:999px;padding:12px 18px;font:700 14px var(--sans);cursor:pointer;min-height:48px;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.sound:hover{background:#FF8F26}
+.sound:focus-visible{outline:3px solid #FF7A00;outline-offset:3px}
+.sound svg{width:20px;height:20px;flex:none}
+.sound .waves{display:none}
+.sound[aria-pressed="true"] .waves{display:inline}
+.sound[aria-pressed="true"] .slash{display:none}
+@media (max-width:760px){
+  .hero{padding:36px 0 44px}
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .brand{margin-bottom:28px}
+  .steps{grid-template-columns:1fr;gap:16px}
+  .row{grid-template-columns:48px 1fr;padding:18px 0}
+  .num{font-size:32px}
+  .row .btn{grid-column:2;justify-self:start}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><i></i>Idea Vault by Omkar Kadam</div>
+      <h1>42 product ideas, ready for builders and backers.</h1>
+      <p>Browse the list, pick what fits your skills or portfolio, and reach out. If an idea clicks, let's turn it into a real product or service.</p>
+    </div>
+    <aside class="contact-box">
+      <h2>Like an idea? Let's talk.</h2>
+      <p>Developers, studios and investors are welcome. Message me with the idea number.</p>
+      <div class="btn-row">
+        <a class="btn btn-mark" href="https://www.linkedin.com/in/omkark610/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://x.com/omkark610" target="_blank" rel="noopener">X (Twitter)</a>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="steps">
+    <div><b>Browse</b><span>Search or filter by category.</span></div>
+    <div><b>Enquire</b><span>Tap "Enquire" on any idea to copy its reference.</span></div>
+    <div><b>Connect</b><span>Message me on LinkedIn or X and we take it from there.</span></div>
+  </div>
+
+  <section class="controls" aria-label="Search and filter">
+    <input class="search" id="q" type="search" placeholder="Search ideas, e.g. game, health, blockchain" aria-label="Search ideas">
+    <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+  </section>
+
+  <p class="count" id="count" aria-live="polite"></p>
+  <ol class="list" id="list"></ol>
+  <p class="empty" id="empty" hidden>No ideas match that search. Try a different word or choose All.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Have the skills or the capital?</h2>
+    <p>Every idea here is open for conversation: building together, funding, or licensing. Reach out and tell me which one caught your eye.</p>
+    <div class="btn-row">
+      <a class="btn btn-mark" href="https://www.linkedin.com/in/omkark610/" target="_blank" rel="noopener">Message on LinkedIn</a>
+      <a class="btn btn-ghost" href="https://x.com/omkark610" target="_blank" rel="noopener">Message on X</a>
+    </div>
+    <p class="fine">These are early-stage concepts shared for discussion. Nothing here is a product offer or financial advice.</p>
+  </div>
+</footer>
+
+<button class="sound" id="sound" type="button" aria-pressed="false" aria-label="Turn background sound on">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><g class="waves"><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></g><path class="slash" d="M17 9l5 6M22 9l-5 6"/></svg>
+  <span id="soundLabel">Sound off</span>
+</button>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <div class="dlg">
+    <h2 id="dt"></h2>
+    <p>Copy the reference below and paste it in your message so I know which idea you mean.</p>
+    <div class="ref"><span id="ref"></span><button type="button" id="copy">Copy</button></div>
+    <div class="btn-row">
+      <a class="btn btn-in" href="https://www.linkedin.com/in/omkark610/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-x" href="https://x.com/omkark610" target="_blank" rel="noopener">X (Twitter)</a>
+    </div>
+    <button class="close" type="button" id="close">Close</button>
+  </div>
+</dialog>
+
+<script>
+const CATS={games:"Games & VR",social:"Social & community",health:"Health & wellness",web3:"Fintech & Web3",ai:"AI",civic:"Civic & society",hw:"Hardware & deep tech",culture:"Travel & culture",edu:"Education",consumer:"Consumer & services"};
+const I=[
+[1,"Truecaller without ads","consumer","Caller ID and spam blocking with a clean, ad-free experience."],
+[2,"RemoteKing.in","social","A community and social app built for remote tech workers."],
+[3,"The Legend of Ram","games","A story-driven game built around the epic of Ram."],
+[4,"Online voting app","civic","Secure, accessible voting from a phone."],
+[5,"Drone company","hw","A drone venture for practical, everyday use cases."],
+[6,"Realtime emotion detection","ai","Spot rising tension early and avoid conflicts before they happen."],
+[7,"AI avatars of legends","ai","Ask questions to AI avatars of great personalities."],
+[8,"Ancestral family tree on blockchain","web3","One tamper-proof family tree connecting all of humanity."],
+[9,"Shivaji Maharaj forts website","culture","A complete guide to every fort linked to Chhatrapati Shivaji Maharaj."],
+[10,"India tourism app","culture","One app to discover and plan travel across India."],
+[11,"Smart contracts for consent and marriage","web3","Verifiable digital agreements for consent and marriage."],
+[12,"Universal basic income","civic","A model for a basic income that reaches everyone."],
+[13,"High-odds lottery app","consumer","A lottery app designed with much better chances of winning."],
+[14,"Global ID","web3","A worldwide digital identity, in the spirit of Worldcoin."],
+[15,"Live to 130","health","Daily tips and habits for a long, healthy life."],
+[16,"Games for PC and VR","games","Original game titles for PC and virtual reality."],
+[17,"Timeline / Timeleft app","consumer","See your life and time laid out on a simple timeline."],
+[18,"Play-to-earn game","games","Gamers earn Bitcoin or local currency for playing."],
+[19,"VR Home","games","A virtual replica of your real home to walk through."],
+[20,"Cleanliness crash course","edu","Online lessons on hygiene, waste separation and clean living."],
+[21,"Guardians of Health","health","A game that teaches healthy food and good habits."],
+[22,"Captain Safe and Smart Ones","edu","A children's game that teaches good touch and bad touch."],
+[23,"AI stories of Ramayan and Mahabharat","ai","The epics retold with AI for a new generation."],
+[24,"Online school and college","edu","A full online institution from school to degree."],
+[25,"Gold-backed credit and loans","web3","A credit and loan system backed by gold."],
+[26,"Decentralised conflict resolution","civic","A fair, community-driven way to settle disputes."],
+[27,"Trustworthiness meter","social","A social media signal showing how trustworthy a profile is."],
+[28,"Realtime autobiography","social","A social platform where your life story writes itself as you live it."],
+[29,"Ideal citizen score","civic","A grade that encourages good civic behaviour."],
+[30,"Self-balancing AI cycle","hw","A smart bicycle that balances itself."],
+[31,"Unified financial dashboard","web3","All accounts, investments and loans in one view."],
+[32,"Online museum","culture","Explore museum collections from anywhere."],
+[33,"Healthy fast food app","health","Order only healthy fast food, like idli or a veggie sub."],
+[34,"Healthy groceries app","health","A store that hides products high in sugar and other red flags."],
+[35,"Laundry startup","consumer","A reliable, tech-enabled laundry service."],
+[36,"Justice insurance","web3","Insurance that covers the cost of seeking justice."],
+[37,"Map-based social media and games","social","Social networking and games played on top of a live map."],
+[38,"Pre-marriage health tests package","health","One bundled package of all tests before marriage."],
+[39,"AI locket","hw","A wearable for children and elders with GPS and audio tracking."],
+[40,"Home food testing kit","hw","Check food quality and safety at home."],
+[41,"Ant-Man in the chip fab","games","Dodge lasers and hazards inside a semiconductor plant while learning how chips are made."],
+[42,"DailyLog","consumer","An online diary for your everyday notes."]
+];
+const PITCH={
+1:"Spam protection people trust, without paying for it with their attention.",
+2:"A dedicated home for India's remote tech workers to connect, learn and find work.",
+3:"An epic loved across generations, built as a game people want to play.",
+4:"Make voting as easy as a UPI payment, with every vote verifiable.",
+5:"Drones are shifting from novelty to everyday utility; this is a focused way into that market.",
+6:"Catch rising tension early and prevent a conflict instead of managing it afterwards.",
+7:"Learn straight from history's greats: ask a question and hear back in their voice.",
+8:"One shared, permanent record of where every family comes from.",
+9:"Every fort in one trusted guide, made for history lovers and travellers.",
+10:"One app to plan every trip across India, from heritage sites to hidden gems.",
+11:"Replace paper promises with agreements that are clear, timestamped and tamper-proof.",
+12:"A practical path to a financial floor for every citizen.",
+13:"A lottery players can trust, built around fairer odds.",
+14:"One digital identity that proves you're a real person anywhere in the world.",
+15:"Turn the science of living longer into simple daily habits.",
+16:"Original PC and VR titles for a global gaming audience.",
+17:"See your time at a glance and make each day count.",
+18:"Players get paid for their skill and time, in Bitcoin or their own currency.",
+19:"Walk through your own home in VR, from anywhere.",
+20:"Clean habits taught in short lessons, for homes, schools and cities.",
+21:"Kids learn healthy eating by playing, not by being told.",
+22:"Teach children to stay safe through a game they enjoy, not a lecture.",
+23:"Timeless epics retold for a generation that lives on screens.",
+24:"Quality education that reaches students wherever they are.",
+25:"Unlock credit using an asset families already trust: gold.",
+26:"Settle disputes fairly and quickly, without years in court.",
+27:"Show which profiles can be trusted, so people can engage with confidence.",
+28:"Your life story, written as you live it, with no extra effort.",
+29:"Reward good civic habits and make them visible.",
+30:"A bicycle that balances itself, so anyone can ride with confidence.",
+31:"All your money in one view: accounts, investments and loans.",
+32:"A world-class museum visit, open to anyone with a phone.",
+33:"Fast food that is actually good for you, in one tap.",
+34:"Shop for groceries knowing every item has already passed a health check.",
+35:"A reliable laundry service that saves busy people time every week.",
+36:"Protection that covers the cost of getting justice when it's needed.",
+37:"Turn the real map into a playground for games and social connection.",
+38:"Everything couples need to check before marriage, in a single package.",
+39:"Peace of mind for families: a wearable that helps keep children and elders safe.",
+40:"Check what you eat before you eat it, right from your kitchen.",
+41:"Learn how chips are made by escaping from inside the factory.",
+42:"A simple daily journal that keeps your memories in one place."
+};
+const list=document.getElementById('list'),chips=document.getElementById('chips'),q=document.getElementById('q'),count=document.getElementById('count'),empty=document.getElementById('empty');
+let cat='all';
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function renderChips(){
+  const n=k=>k==='all'?I.length:I.filter(i=>i[2]===k).length;
+  chips.innerHTML=['all',...Object.keys(CATS)].map(k=>`<button class="chip" type="button" data-k="${k}" aria-pressed="${k===cat}">${k==='all'?'All':CATS[k]}<small>${n(k)}</small></button>`).join('');
+}
+function render(){
+  const t=q.value.trim().toLowerCase();
+  const r=I.filter(i=>(cat==='all'||i[2]===cat)&&(!t||(i[1]+' '+i[3]+' '+CATS[i[2]]).toLowerCase().includes(t)));
+  list.innerHTML=r.map(i=>`<li class="row"><div class="num">${i[0]}</div><div><h3>${esc(i[1])}</h3><p class="pitch">Pitch: ${esc(PITCH[i[0]]||'')}</p><p>${esc(i[3])}</p><span class="cat">${CATS[i[2]]}</span></div><button class="btn" type="button" data-id="${i[0]}">Enquire</button></li>`).join('');
+  count.textContent=`Showing ${r.length} of ${I.length} ideas`;
+  empty.hidden=r.length>0;
+}
+chips.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;cat=b.dataset.k;renderChips();render()});
+q.addEventListener('input',render);
+const dlg=document.getElementById('dlg'),refEl=document.getElementById('ref'),copyBtn=document.getElementById('copy');
+list.addEventListener('click',e=>{
+  const b=e.target.closest('[data-id]');if(!b)return;
+  const i=I.find(x=>x[0]==b.dataset.id);
+  document.getElementById('dt').textContent=i[1];
+  refEl.textContent=`Idea #${i[0]}: ${i[1]}`;
+  copyBtn.textContent='Copy';
+  dlg.showModal();
+});
+copyBtn.addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText(refEl.textContent);copyBtn.textContent='Copied'}catch(e){copyBtn.textContent='Select and copy'}
+});
+document.getElementById('close').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+const sBtn=document.getElementById('sound'),sLab=document.getElementById('soundLabel');
+let ac,master,playing=false;
+let timer,step=0,nextT=0,nbuf;
+const SP=60/100/4;
+const PROG=[{r:48,c:[60,64,67]},{r:43,c:[55,59,62]},{r:45,c:[57,60,64]},{r:41,c:[53,57,60]}];
+const HOOK=[[72,76,79,76,72,76,79,84],[71,74,79,74,71,74,79,83],[69,72,76,72,69,72,76,81],[69,72,77,72,69,72,77,81]];
+const mtof=m=>440*Math.pow(2,(m-69)/12);
+function env(g,t,a,d,v){g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+d)}
+function tone(m,t,d,type,v,fc){const o=ac.createOscillator(),f=ac.createBiquadFilter(),g=ac.createGain();o.type=type;o.frequency.value=mtof(m);f.type='lowpass';f.frequency.value=fc;env(g,t,.01,d,v);o.connect(f);f.connect(g);g.connect(master);o.start(t);o.stop(t+d+.05)}
+function kick(t){const o=ac.createOscillator(),g=ac.createGain();o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(45,t+.12);env(g,t,.003,.28,.9);o.connect(g);g.connect(master);o.start(t);o.stop(t+.3)}
+function noise(t,d,type,fc,v){const s=ac.createBufferSource();s.buffer=nbuf;const f=ac.createBiquadFilter();f.type=type;f.frequency.value=fc;const g=ac.createGain();env(g,t,.002,d,v);s.connect(f);f.connect(g);g.connect(master);s.start(t);s.stop(t+d+.05)}
+function play(s,t){
+  const b=Math.floor(s/16)%4,k=s%16,p=PROG[b];
+  if(k===0||k===8)kick(t);
+  if(k%4===2)noise(t,.04,'highpass',8000,.05);
+  if(k===0||k===8)tone(p.r,t,.7,'sine',.3,400);
+  if(k===0)p.c.forEach(m=>tone(m,t,1.7,'triangle',.1,1800));
+  if(k%2===0){const n=HOOK[b][k/2];if(n)tone(n,t,.35,'triangle',.09,3500)}
+}
+function startLoop(){step=0;nextT=ac.currentTime+.1;clearInterval(timer);timer=setInterval(()=>{while(nextT<ac.currentTime+.2){play(step,nextT);nextT+=SP;step=(step+1)%64}},25)}
+function stopLoop(){clearInterval(timer)}
+function buildPad(){
+  ac=new (window.AudioContext||window.webkitAudioContext)();
+  master=ac.createGain();master.gain.value=0;
+  const comp=ac.createDynamicsCompressor();master.connect(comp);comp.connect(ac.destination);
+  nbuf=ac.createBuffer(1,ac.sampleRate,ac.sampleRate);
+  const d=nbuf.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;
+}
+sBtn.addEventListener('click',async()=>{
+  try{
+    if(!ac)buildPad();
+    playing=!playing;
+    if(playing){await ac.resume();startLoop();master.gain.cancelScheduledValues(ac.currentTime);master.gain.linearRampToValueAtTime(.3,ac.currentTime+1.5)}
+    else{master.gain.cancelScheduledValues(ac.currentTime);master.gain.linearRampToValueAtTime(0,ac.currentTime+.8);setTimeout(()=>{if(!playing){stopLoop();ac.suspend()}},900)}
+  }catch(e){playing=false}
+  sBtn.setAttribute('aria-pressed',playing);
+  sBtn.setAttribute('aria-label',playing?'Turn background sound off':'Turn background sound on');
+  sLab.textContent=playing?'Sound on':'Sound off';
+});
+renderChips();render();
+</script>
+</body>
+</html>
